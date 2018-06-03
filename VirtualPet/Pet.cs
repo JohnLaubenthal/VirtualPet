@@ -18,57 +18,58 @@ namespace VirtualPet
         private bool hungerAlert;
         private bool boredomAlert;
         private bool tiredAlert;
+        
 
         //declaring properties
 
         public string Name
         {
-            get { return this.Name; }
-            set { this.Name = value; }
+            get { return this.name; }
+            set { this.name = value; }
         }
         public int Boredom
         {
-            get { return this.Boredom; }
-            set { this.Boredom = value; }
+            get { return this.boredom; }
+            set { this.boredom = value; }
         }
         public int Thirst
         {
-            get { return this.Thirst; }
-            set { this.Thirst = value; }
+            get { return this.thirst; }
+            set { this.thirst = value; }
         }
         public int Hunger
         {
-            get { return this.Hunger; }
-            set { this.Hunger = value; }
+            get { return this.hunger; }
+            set { this.hunger = value; }
         }
         public int Tiredness
         {
-            get { return this.Tiredness; }
-            set { this.Tiredness = value; }
+            get { return this.tiredness; }
+            set { this.tiredness = value; }
         }
 
         public bool TiredAlert
         {
-            get { return this.TiredAlert; }
-            set { this.TiredAlert = value; }
+            get { return this.tiredAlert; }
+            set { this.tiredAlert = value; }
         }
 
         public bool BoredomAlert
         {
-            get { return this.BoredomAlert; }
-            set { this.BoredomAlert = value; }
+            get { return this.boredomAlert; }
+            set { this.boredomAlert = value; }
         }
 
         public bool HungerAlert
         {
-            get { return this.HungerAlert; }
-            set { this.HungerAlert = value; }
+            get { return this.hungerAlert; }
+            set { this.hungerAlert = value; }
         }
 
         public bool ThirstAlert
         {
-            get { return this.ThirstAlert; }
-            set { this.ThirstAlert = value; }
+            get { return this.thirstAlert; }
+            set { this.thirstAlert = value; }
         }
 
         public Pet()
@@ -89,7 +90,7 @@ namespace VirtualPet
         public void GetTick()
         {
             Hunger++;
-            if (Hunger > 25)
+            if (Hunger > 1)
             {
                 Hungeralert(true);
             }
@@ -98,7 +99,7 @@ namespace VirtualPet
                 Hungeralert(false);
             }
             Thirst++;
-            if (Thirst > 5)
+            if (Thirst > 1)
             {
                 Thirstalert(true);
             }
@@ -107,7 +108,7 @@ namespace VirtualPet
                 Thirstalert(false);
             }
             Boredom++;
-            if (Boredom > 25)
+            if (Boredom > 1)
             {
                 Boredomalert(true);
             }
@@ -116,7 +117,7 @@ namespace VirtualPet
                 Boredomalert(false);
             }
             Tiredness++;
-            if (Tiredness > 5)
+            if (Tiredness > 1)
             {
                 Tiredalert(true);
             }
